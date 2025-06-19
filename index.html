@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <div class="logo">
+            <h1 class="animated-text">HEALTH<span>HUB</span></h1>
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#habits">Habits</a></li>
+                <li><a href="#mindful">Mindful Minutes</a></li>
+                <li><a href="#stats">Statistics</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2 class="animated-text">Track Your Way to a <span>Healthier You</span></h2>
+            <p>Build better habits, achieve your goals, and improve your wellbeing.</p>
+            <button class="cta-button">Exercise Tips</button></button>
+        </section>
+
+        <section id="habits" class="habits-section">
+            <h2 class="section-title animated-text">Habit <span>Tracker</span></h2>
+            
+            <div class="habit-form">
+                <input type="text" id="habit-input" placeholder="Add a new habit...">
+                <select id="habit-category">
+                    <option value="fitness">Fitness</option>
+                    <option value="nutrition">Nutrition</option>
+                    <option value="mindfulness">Mindfulness</option>
+                    <option value="sleep">Sleep</option>
+                    <option value="water">Water</option>
+                </select>
+                <button id="add-habit">Add Habit</button>
+            </div>
+
+            <div class="habits-container">
+                <!-- Habits will be added here dynamically -->
+            </div>
+        </section>
+
+        <section id="mindful" class="mindful-section">
+            <h2 class="section-title animated-text">Mindful <span>Minutes</span></h2>
+            <p>Take a moment to relax and recharge with these guided exercises.</p>
+            
+            <div class="mindful-exercises">
+                <div class="exercise-card">
+                    <h3>Breathing Exercise</h3>
+                    <p>Follow the animation to breathe deeply and reduce stress.</p>
+                    <div class="breathing-animation">
+                        <div class="circle"></div>
+                    </div>
+                    <button class="start-exercise" data-exercise="breathing">Start</button>
+                    <div class="timer">00:00</div>
+                </div>
+                
+                <div class="exercise-card">
+                    <h3>Body Scan</h3>
+                    <p>A guided meditation to release tension throughout your body.</p>
+                    <button class="start-exercise" data-exercise="bodyscan">Start</button>
+                    <div class="timer">00:00</div>
+                </div>
+                
+                <div class="exercise-card">
+                    <h3>Gratitude Practice</h3>
+                    <p>Take a moment to reflect on what you're grateful for.</p>
+                    <button class="start-exercise" data-exercise="gratitude">Start</button>
+                    <div class="timer">00:00</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="stats-section">
+            <h2 class="section-title animated-text">Your <span>Progress</span></h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Weekly Streak</h3>
+                    <div class="stat-value" id="streak-value">0</div>
+                    <div class="stat-chart" id="streak-chart"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Habits Completed</h3>
+                    <div class="stat-value" id="completed-value">0</div>
+                    <div class="stat-chart" id="completed-chart"></div>
+                </div>
+                <div class="stat-card">
+                    <h3>Mindful Minutes</h3>
+                    <div class="stat-value" id="mindful-value">0</div>
+                    <div class="stat-chart" id="mindful-chart"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Health Hub. All rights reserved.</p>
+        <p style="color:rgb(255,215,0);"> This Website made by PIYUSH PANDEY</p>
+    </footer>
+
+    <div class="modal" id="mindful-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="exercise-title">Exercise Title</h2>
+            <div id="exercise-content"></div>
+            <div class="exercise-timer">
+                <span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+            <button id="stop-exercise">End Exercise</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
